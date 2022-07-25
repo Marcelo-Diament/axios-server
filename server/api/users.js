@@ -16,7 +16,7 @@ api.readUsers = async (req, res) => {
   if (!users || !users.length) {
     return res.status(404).json({ status: 'Not Found', statusCode: 404, message: 'Não há usuários cadastrados.' })
   }
-  return res.json(users)
+  return res.status(200).json(users)
 }
 
 api.readUser = async (req, res) => {
