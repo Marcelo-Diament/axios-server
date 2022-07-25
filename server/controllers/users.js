@@ -24,6 +24,9 @@ controller.read = async (req, res) => {
     id
   } = req.params
   const user = await getUser(id)
+  if (!user) {
+    res.status(404).json({ message: 'Vê direito rapá' })
+  }
   res.render('usuario', {
     title: user.nome,
     user
