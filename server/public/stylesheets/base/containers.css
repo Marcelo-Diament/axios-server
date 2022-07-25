@@ -1,0 +1,116 @@
+body {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+body>header {
+  align-items: center;
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex: 1 0 100%;
+  flex-flow: row nowrap;
+  height: var(--header-height);
+  justify-content: space-between;
+  margin: 0;
+  padding: var(--spacing);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+body>header>nav>ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row nowrap;
+  height: 80px;
+  justify-content: flex-end;
+}
+
+body>header>nav>ul {
+  padding: var(--spacing-half);
+}
+
+body>main {
+  align-items: stretch;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column nowrap;
+  height: var(--main-height);
+  justify-content: flex-start;
+  margin: 0;
+  min-height: calc(100vh - 192px);
+  padding: 0;
+}
+
+body>main>section {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: var(--spacing-double) 0 0;
+  padding: var(--spacing);
+  width: 100%;
+}
+
+body>main>section>article {
+  align-items: stretch;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-top: var(--spacing-double);
+  padding:  var(--spacing);
+  width: 100%;
+}
+
+body>aside {
+  align-items: stretch;
+  display: flex;
+  flex: 0 1 30%;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+body>section:last-of-type {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  min-width: 100%;
+  padding: var(--spacing-double);
+  width: 100%;
+}
+
+body>section:last-of-type h2 {
+  color: var(--primary-light);
+}
+
+body>footer {
+  align-items: center;
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex: 1 0 100%;
+  flex-flow: row nowrap;
+  height: var(--footer-height);
+  justify-content: center;
+  margin: 0;
+  padding: var(--spacing-double);
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 640px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1041px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1920px) {}

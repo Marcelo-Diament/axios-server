@@ -1,0 +1,34 @@
+/* BORDER RADIUS */
+.rounded {
+  border-radius: var(--border-radius-50);
+}
+
+/* FLEX BOX */
+.flex-item--empty {
+  height: 0;
+  max-height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-item-full-row {
+  flex: 1 0 100%;
+}
+
+/* HIDDEN */
+.hidden {
+  background-color: transparent;
+  border: transparent;
+  color: transparent;
+  display: inline;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  max-height: 0;
+  max-width: 0;
+  padding: 0;
+  pointer-events: none;
+  width: 0;
+}

@@ -1,0 +1,71 @@
+:root {
+
+  --border-radius: 8px;
+  --border-radius-half: calc(var(--border-radius)/2);
+  --border-radius-double: calc(var(--border-radius)*2);
+
+  --border-radius-1: var(--border-radius) 0 0 0;
+  --border-radius-2: 0 var(--border-radius) 0 0;
+  --border-radius-3: 0 0 var(--border-radius) 0;
+  --border-radius-4: 0 0 0 var(--border-radius);
+
+  --border-radius-bottom: 0 0 var(--border-radius) var(--border-radius);
+  --border-radius-left: var(--border-radius) 0 0 var(--border-radius);
+  --border-radius-top: var(--border-radius) var(--border-radius) 0 0;
+  --border-radius-right: 0 var(--border-radius) var(--border-radius) 0;
+
+  --border-radius-quina-1: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  --border-radius-quina-2: var(--border-radius) 0 var(--border-radius) var(--border-radius);
+  --border-radius-quina-3: var(--border-radius) var(--border-radius) 0 var(--border-radius);
+  --border-radius-quina-4: var(--border-radius) var(--border-radius) var(--border-radius) 0;
+
+  --border-radius-quina-bottom: var(--border-radius) var(--border-radius) 0 0;
+  --border-radius-quina-left: 0 var(--border-radius) var(--border-radius) 0;
+  --border-radius-quina-top: 0 0 var(--border-radius) var(--border-radius);
+  --border-radius-quina-right: var(--border-radius) 0 0 var(--border-radius);
+
+  --border-radius-half-1: var(--border-radius-half) 0 0 0;
+  --border-radius-half-2: 0 var(--border-radius-half) 0 0;
+  --border-radius-half-3: 0 0 var(--border-radius-half) 0;
+  --border-radius-half-4: 0 0 0 var(--border-radius-half);
+
+  --border-radius-half-bottom: 0 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-half-left: var(--border-radius-half) 0 0 var(--border-radius-half);
+  --border-radius-half-top: var(--border-radius-half) var(--border-radius-half) 0 0;
+  --border-radius-half-right: 0 var(--border-radius-half) var(--border-radius-half) 0;
+
+  --border-radius-quina-half-1: 0 var(--border-radius-half) var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-2: var(--border-radius-half) 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-3: var(--border-radius-half) var(--border-radius-half) 0 var(--border-radius-half);
+  --border-radius-quina-half-4: var(--border-radius-half) var(--border-radius-half) var(--border-radius-half) 0;
+
+  --border-radius-quina-half-bottom: var(--border-radius-half) var(--border-radius-half) 0 0;
+  --border-radius-quina-half-left: 0 var(--border-radius-half) var(--border-radius-half) 0;
+  --border-radius-quina-half-top: 0 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-right: var(--border-radius-half) 0 0 var(--border-radius-half);
+
+  --border-radius-double-1: var(--border-radius-double) 0 0 0;
+  --border-radius-double-2: 0 var(--border-radius-double) 0 0;
+  --border-radius-double-3: 0 0 var(--border-radius-double) 0;
+  --border-radius-double-4: 0 0 0 var(--border-radius-double);
+
+  --border-radius-double-bottom: 0 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-double-left: var(--border-radius-double) 0 0 var(--border-radius-double);
+  --border-radius-double-top: var(--border-radius-double) var(--border-radius-double) 0 0;
+  --border-radius-double-right: 0 var(--border-radius-double) var(--border-radius-double) 0;
+
+  --border-radius-quina-double-1: 0 var(--border-radius-double) var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-2: var(--border-radius-double) 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-3: var(--border-radius-double) var(--border-radius-double) 0 var(--border-radius-double);
+  --border-radius-quina-double-4: var(--border-radius-double) var(--border-radius-double) var(--border-radius-double) 0;
+
+  --border-radius-quina-double-bottom: var(--border-radius-double) var(--border-radius-double) 0 0;
+  --border-radius-quina-double-left: 0 var(--border-radius-double) var(--border-radius-double) 0;
+  --border-radius-quina-double-top: 0 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-right: var(--border-radius-double) 0 0 var(--border-radius-double);
+
+  --border-radius-50: 50%;
+
+  --border-width: 1px;
+  --border-style: solid;
+}

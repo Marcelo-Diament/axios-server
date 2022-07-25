@@ -1,0 +1,39 @@
+<%- include('partials/head', title) %>
+<%- include('partials/header', title) %>
+
+<main>
+  <h1><%= title %></h1>
+  <section class="bg-tertiary-light">
+
+    <% if(!locals.user) { %>
+
+    <article>
+      <h2>Ops...</h2>
+      <p>Sentimos muito, mas não encontramos o usuário buscado...</p>
+      <div class="btn-group btn-group--end">
+        <a href="/usuarios" class="btn btn--tertiary">Ver usuários</a>
+      </div>
+    </article>
+
+    <% } else { %>
+
+    <% const {cep, uf, cidade, bairro, logradouro, numero, complemento } = user.endereco[0] %>
+
+    <article>
+      <h2><%= user.nome %></h2>
+      <p><b>Email:</b> <%= user.email %></p>
+      <p><b>Endereço</b></p>
+      <p><%= logradouro %>,<%= numero %><%= complemento ? ` - ${complemento}` : '' %></p>
+      <p>CEP <%= cep %></p>
+      <p><%= bairro %>, <%= cidade %>/<%= uf %></p>
+      <div class="btn-group btn-group--end">
+        <a href="/usuarios/<%= user.id %>/editar" class="btn btn--warning">Editar</a>
+        <button form="apagarUsuario" class="btn btn--alert">Excluir</button>
+      </div>
+      <form action="/usuarios/<%= user.id %>/excluir?_method=delete" method="POST" id="apagarUsuario" class="hidden"></form>
+    </article>
+    <% } %>
+  </section>
+</main>
+
+<%- include('partials/footer', title) %>

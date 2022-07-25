@@ -1,0 +1,72 @@
+<%- include('partials/head', title) %>
+<%- include('partials/header', title) %>
+
+<main>
+  <h1><%= title %></h1>
+  <section class="bg-tertiary-light">
+
+    <%
+      const {nome, email, senha } = locals.user
+      const {cep, uf, cidade, bairro, logradouro, numero, complemento } = user.endereco[0]
+      console.log(locals.user)
+    %>
+
+    <form action="?_method=put" method="POST">
+      <fieldset>
+        <div class="input-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" value="<%= nome %>">
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="<%= email %>">
+        </div>
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" value="<%= senha %>">
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="input-group">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" value="<%= cep %>" maxlength="9" minlength="8">
+        </div>
+        <div class="input-group">
+          <label for="uf">UF</label>
+          <select name="uf" id="uf">
+            <option value="" disabled>Selecionar</option>
+            <% for(let ufOption of ufs) { %>
+            <option value="<%= ufOption.sigla %>" <%= (ufOption.sigla == uf) ? "selected" : "" %>><%= ufOption.sigla %></option>
+            <% } %>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" name="cidade" value="<%= cidade %>">
+        </div>
+        <div class="input-group">
+          <label for="bairro">Bairro</label>
+          <input type="text" id="bairro" name="bairro" value="<%= bairro %>">
+        </div>
+        <div class="input-group">
+          <label for="logradouro">Logradouro</label>
+          <input type="text" id="logradouro" name="logradouro" value="<%= logradouro %>">
+        </div>
+        <div class="input-group">
+          <label for="numero">Número</label>
+          <input type="text" id="numero" name="numero" value="<%= numero %>">
+        </div>
+        <div class="input-group">
+          <label for="complemento">Complemento</label>
+          <input type="text" id="complemento" name="complemento" value="<%= complemento %>">
+        </div>
+      </fieldset>
+      <div class="btn-group btn-group--end">
+        <button class="btn btn--tertiary">Enviar</button>
+      </div>
+    </form>
+
+  </section>
+</main>
+
+<%- include('partials/footer', title) %>

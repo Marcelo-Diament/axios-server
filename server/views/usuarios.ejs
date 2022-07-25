@@ -1,0 +1,36 @@
+<%- include('partials/head', title) %>
+<%- include('partials/header', title) %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+
+    <% if(!locals.users) { %>
+
+    <article class="card bg-tertiary-light">
+      <h2 class="card__title">Ops...</h2>
+      <p class="card__description">Sentimos muito, mas não há nenhum usuário cadastrado no momento. Que tal cadastrar-se?</p>
+      <div class="btn-group btn-group--end">
+        <a href="cadastro" class="btn btn--tertiary">Quero me cadastrar</a>
+      </div>
+    </article>
+
+    <% } else { %>
+
+    <% for(let user of users) { %>
+    <article class="card bg-tertiary-light badge badge-tertiary" data-badge="#<%= user.id %>">
+
+      <h2 class="card__title"><%= user.nome %></h2>
+      <p class="card__description"><%= user.email %></p>
+      <div class="btn-group btn-group--end">
+        <a href="/usuarios/<%= user.id %>" class="btn btn--tertiary">Detalhes</a>
+      </div>
+
+    </article>
+    <% } %>
+
+    <% } %>
+  </section>
+</main>
+
+<%- include('partials/footer', title) %>

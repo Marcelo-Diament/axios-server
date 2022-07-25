@@ -1,0 +1,11 @@
+:root {
+  --media-query-xxs: 576px;
+  --media-query-xs: 640px;
+  --media-query-sm: 768px;
+  --media-query-md: 992px;
+  --media-query-lg: 1041px;
+  --media-query-xl: 1400px;
+  --media-query-xxl: 1920px;
+  --media-orientation-portrait: portrait;
+  --media-orientation-landscape: landscape;
+}
