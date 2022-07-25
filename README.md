@@ -1508,3 +1508,74 @@ controller.delete = async (req, res) => {
 
 module.exports = controller
 ```
+
+## API EXTERNA (Axios)
+
+### Axios no Node
+
+```sh
+# Instalando o axios como dependência (caso não tenha instalado) - dentro da pasta server
+npm install axios --save
+
+# Criando o arquivo server/api/ibge.js (estando dentro de server)
+touch api/ibge.js
+```
+
+**server/api/ibge.js**
+
+```js
+const axios = require('axios')
+
+const ibge = axios.create({
+    baseURL: 'https://servicodados.ibge.gov.br/api/v1/localidades',
+    timeout: 4000
+})
+
+module.exports = ibge
+```
+
+**server/controllers/users.js**
+
+```js
+// Imports
+const ibge = require('../api/ibge')
+
+controller.add = (req, res) => {
+    ibge.get('/estados?orderBy=nome')
+        .then(response => {
+            const ufs = response.data
+            res.render('usuario-adicionar', {
+                title: 'Adicionar Usuário',
+                ufs
+            })
+        })
+        .catch(err => res.status(500).json({
+            status: 'Internal Server Error',
+            statusCode: 500,
+            message: `Deu ruim... veja o erro: ${err}`
+        }))
+}
+
+controller.edit = async (req, res) => {
+    const {
+        id
+    } = req.params
+    const user = await getUser(id)
+    ibge.get('/estados?orderBy=nome')
+        .then(response => {
+            const ufs = response.data
+            res.render('usuario-editar', {
+                title: `Editar Usuário ${user.nome}`,
+                user,
+                ufs
+            })
+        })
+        .catch(err => res.status(500).json({
+            status: 'Internal Server Error',
+            statusCode: 500,
+            message: `Deu ruim... veja o erro: ${err}`
+        }))
+}
+
+// Outros métodos
+```
